@@ -91,6 +91,9 @@ At the end of the this hands-on training, students will be able to;
 
 ##  Part 4 - Creating role and attaching to EC2
 
+**To be able to do this handson you must have a bucket and two objects (index.html, cat.jpg) in it in your own account and
+you have to replace the bucket name in the user data.**
+
 - Create a role :
 
 ```text
