@@ -59,20 +59,27 @@ Once an archive has been created it is important to test the archive. The archiv
 
 To see a listing of the archive contents. From a terminal prompt type:
 
+```bash
 tar -tzvf /mnt/backup/ip-172-31-89-147-2021_11_02_12_26_AM.tgz
-
+```
 
 To restore a file from the archive to a different directory enter:
 
+```bash
 tar -xzvf /mnt/backup/ip-172-31-89-147-2021_11_02_12_26_AM.tgz -C /tmp etc/hosts
+```
+
 The -C option to tar redirects the extracted files to the specified directory. The above example will extract the etc/hosts file to /tmp/etc/hosts. tar recreates the directory structure that it contains.
 
 Also, notice the leading “/” is left off the path of the file to restore.
 
 To restore all files in the archive enter the following:
 
+```bash
 cd /
 sudo tar -xzvf /mnt/backup/ip-172-31-89-147-2021_11_02_12_26_AM.tgz
-Note
+```
+
+Note: 
 
 This will overwrite the files currently on the file system.
