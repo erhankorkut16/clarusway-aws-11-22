@@ -35,10 +35,6 @@ date
 ls -lh $dest
 
 -------------
-# /etc/crontab ın içine yazılacak
-
-
-# Good article -> https://www.cumulations.com/blog/how-to-write-cron-jobs-on-amazon-web-servicesaws-ec2-server/
 
 # To set this script for executing in every 5 minutes, we'll create cronjob
 ```bash
