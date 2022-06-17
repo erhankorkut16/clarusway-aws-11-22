@@ -277,7 +277,7 @@ Record ID               : Failover Scenario-secondary
 
 
 
-## Part 3 - Creating a Gelocation routing policies
+## Part 3 - Creating a Geolocation routing policies
 
 ### STEP 1 :Create Geolocation record for Japan
 
