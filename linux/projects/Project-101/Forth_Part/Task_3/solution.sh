@@ -1,16 +1,10 @@
 
-cat auth.log | grep -i "input_userauth_request" | cut -d" " -f9 > temp.sh
-
-cat auth.log | grep -i "input_userauth_request" | cut -d" " -f10 >> temp.sh 
-
-# than remove "user" from invalid_user.sh file.
-
-cat temp.sh | grep -vw user > temp_2.sh
-
-cat temp_2.sh | sort | uniq -c > invalid_user.sh
-
-rm temp.sh temp_2.sh
-
-Alternative:
-
 grep -Eio "input_userauth_request: invalid user .+ " auth.log | awk '{print $4}' | sort | uniq -c > invalid_user.sh
+
+or
+
+cat auth.log | grep -i invalid | grep -i Failed| awk '{print $9 " " $10 " " $11}'|sort|uniq -c|nl| tee invalid_user.sh
+
+or
+
+awk '/Invalid user/' auth.log | awk -F"]: " '{print $2}' | awk -F" " '{print $3}' | sort | uniq -c > invalid_user.sh
